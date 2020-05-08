@@ -1,0 +1,27 @@
+<div class="main-content">
+
+<nav >
+    <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="right hide-on-med-and-down">
+
+         <div > <button class="btn btn-outline-primary"  (click)="Logout()">Logout</button></div>
+        </ul>
+    </div>
+  </nav>
+</div>
+<div class="main-content">
+
+  <div class="row" *ngIf="userClaims">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-content">
+          <span>Username :{{userClaims.UserName}}</span>
+          <br>
+          <span>Email : {{userClaims.Email}}</span>
+          <br>
+          <span>Full Name : {{userClaims.FirstName}} {{userClaims.LastName}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

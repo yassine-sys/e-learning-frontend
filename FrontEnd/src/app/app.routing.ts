@@ -4,6 +4,9 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { AuthGuard } from './auth/auth.guard';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes =[
   {
@@ -16,7 +19,12 @@ const routes: Routes =[
     children: [{
       path: '',
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
-    }]
+    },{
+      path: 'user-profile', component: UserProfileComponent
+  },{
+    path: 'home', component: HomeComponent,canActivate:[AuthGuard]
+},
+]
   }
 ];
 
