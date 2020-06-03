@@ -10,6 +10,8 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { AuthGuard } from 'app/auth/auth.guard';
 import { HomeComponent } from 'app/home/home.component';
+import { BusinessunitComponent } from 'app/businessunit/businessunit.component';
+import { DepartmentComponent } from 'app/department/department.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -63,4 +65,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'home', component: HomeComponent,canActivate:[AuthGuard] },
+    {path: 'business_unit', component:BusinessunitComponent},
+    { path: 'business_unit/:id',        component: DepartmentComponent },
+
 ];

@@ -7,6 +7,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AuthGuard } from './auth/auth.guard';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HomeComponent } from './home/home.component';
+import { MatTableModule } from '@angular/material/table';
 
 const routes: Routes =[
   {
@@ -32,6 +33,8 @@ const routes: Routes =[
   imports: [
     CommonModule,
     BrowserModule,
+    MatTableModule,
+
     RouterModule.forRoot(routes,{
        useHash: true
     })

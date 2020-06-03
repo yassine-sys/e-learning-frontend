@@ -1,39 +1,5 @@
 <div class="main-content">
-
-  <nav >
-      <div class="navbar navbar-expand-lg navbar-light bg-light">
-          <ul class="right hide-on-med-and-down">
-  
-              <label >First Name : {{userClaims.FirstName}}</label>
-          </ul>
-  
-          <ul class="right hide-on-med-and-down">
-  
-              <label>LastName : {{userClaims.LastName}}</label>
-          </ul>
-          
-          <ul class="right hide-on-med-and-down">
-  
-              <label> Username : {{userClaims.UserName}}</label>
-          </ul>
-          <ul class="right hide-on-med-and-down">
-  
-              <label>Email : {{userClaims.Email}}</label>
-          </ul>
-          <ul class="right hide-on-med-and-down">
-  
-            <div > <button class="btn btn-outline-primary"  (click)="businessunit()">My Business units</button></div>
-           </ul>
-          <ul class="right hide-on-med-and-down">
-  
-              <div > <button class="btn btn-outline-primary"  (click)="Logout()">Logout</button></div>
-             </ul>
-      </div>
-  
-      
-    </nav>
-  </div>
- 
+    <div > <button class="btn btn-outline-primary"  (click)="Logout()">Logout</button></div>
 
 <div fxLayout fxLayoutAlign="center center">
     <div fxFlex="60">
@@ -57,7 +23,11 @@
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
             <td mat-cell *matCellDef="let emp"> {{emp.Description}} </td>
           </ng-container>
-        
+
+          <ng-container matColumnDef="onSelect">
+            <th mat-header-cell *matHeaderCellDef>My Departments </th>  
+            <td mat-cell *matCellDef="let emp"> <button   mat-button color="link"  (click)="onSelect(emp)"  >My Departments</button></td>
+          </ng-container>
       
 
 
@@ -69,7 +39,4 @@
     </div>
   </div>
 </div>
-
-
-
-
+</div>

@@ -21,5 +21,9 @@ export class UserService {
   getUserClaims(){
     return  this.http.get(this.rootUrl+'/api/Account/GetUserClaims');
    }
+
+   DepartmentByUser(Id){
+    return this.http.get('https://localhost:44306/api/Account/api/DepartmentByUser/'+Id)
+  }
  
 }

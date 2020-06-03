@@ -27,6 +27,21 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { UserService } from './user-profile/user.service';
 import { from } from 'rxjs';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatListModule} from '@angular/material/list';
+import { BusinessunitComponent } from './businessunit/businessunit.component';
+import { DepartmentComponent } from './department/department.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
+
 
 @NgModule({
   imports: [
@@ -38,12 +53,32 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatListModule,
+    MatCardModule,
+
+
+
+   
+  MatButtonModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule,
+  MatSortModule,
+  MatCardModule,
+  MatFormFieldModule,
+  FlexLayoutModule,
+
     AgmCoreModule.forRoot({
     })
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    BusinessunitComponent,
+    DepartmentComponent,
+    UserProfileComponent
 
   ],
   providers: [UserService,AuthGuard,
