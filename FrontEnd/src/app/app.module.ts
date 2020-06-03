@@ -78,7 +78,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AdminLayoutComponent,
     BusinessunitComponent,
     DepartmentComponent,
-    UserProfileComponent
+    
 
   ],
   providers: [UserService,AuthGuard,

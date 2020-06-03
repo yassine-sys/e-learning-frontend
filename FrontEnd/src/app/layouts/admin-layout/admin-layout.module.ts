@@ -42,6 +42,7 @@ import { MatTableModule } from '@angular/material/table';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
+    UserProfileComponent
   ]
 })
 
