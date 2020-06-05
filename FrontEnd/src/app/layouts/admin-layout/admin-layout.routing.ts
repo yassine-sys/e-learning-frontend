@@ -57,14 +57,14 @@ export const AdminLayoutRoutes: Routes = [
     //     }]
     // }
     { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user-profile',   component: UserProfileComponent },
+    //{ path: 'user-profile',   component: UserProfileComponent },
     { path: 'table-list',     component: TableListComponent },
     { path: 'typography',     component: TypographyComponent },
     { path: 'icons',          component: IconsComponent },
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
-    { path: 'home', component: HomeComponent,canActivate:[AuthGuard] },
+   // { path: 'home', component: HomeComponent,canActivate:[AuthGuard] },
     {path: 'business_unit', component:BusinessunitComponent},
     { path: 'business_unit/:id',        component: DepartmentComponent },
 
