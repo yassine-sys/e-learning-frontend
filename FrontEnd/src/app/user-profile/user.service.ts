@@ -25,5 +25,9 @@ export class UserService {
    DepartmentByUser(Id){
     return this.http.get('https://localhost:44306/api/Account/api/DepartmentByUser/'+Id)
   }
+
+
+
+
  
 }

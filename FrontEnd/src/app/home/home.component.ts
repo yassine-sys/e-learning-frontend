@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
    
     this.userService.getUserClaims().subscribe((data: any) => {
       this.userClaims = data;
-console.log(data)
+//console.log(data)
 
 //this.Id=this.userService.user.Id
 //this.list()
@@ -59,7 +59,7 @@ this.list()
       this.dataSource.sort=this.sort
       this.dataSource.paginator=this.paginator
       
-      console.log(data);
+      //console.log(data);
     });
 
   }

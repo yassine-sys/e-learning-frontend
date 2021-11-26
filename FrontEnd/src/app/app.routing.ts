@@ -8,23 +8,30 @@ import { AuthGuard } from './auth/auth.guard';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HomeComponent } from './home/home.component';
 import { MatTableModule } from '@angular/material/table';
+import { BusinessunitComponent } from './businessunit/businessunit.component';
+import { DepartmentComponent } from './department/department.component';
+
 
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'user-profile',
     pathMatch: 'full',
   }, {
     path: '',
     component: AdminLayoutComponent,
     children: [{
-      path: '',
+      path: 'auth',
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
     },{
       path: 'user-profile', component: UserProfileComponent
   },{
     path: 'home', component: HomeComponent,canActivate:[AuthGuard]
 },
+{path: 'business_unit', component:BusinessunitComponent ,canActivate:[AuthGuard]},
+{ path: 'business_unit/:id',        component: DepartmentComponent ,canActivate:[AuthGuard] },
+
+
 ]
   }
 ];

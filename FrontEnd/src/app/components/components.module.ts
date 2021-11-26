@@ -19,9 +19,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     
   ],
   exports: [
-    FooterComponent,
-    NavbarComponent,
-    SidebarComponent
+    
   ]
 })
 export class ComponentsModule { }

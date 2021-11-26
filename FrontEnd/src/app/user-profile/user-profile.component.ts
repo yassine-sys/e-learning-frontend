@@ -27,6 +27,7 @@ user:User
      this.userService.userAuthentication(userName,password).subscribe((data : any)=>{
       localStorage.setItem('userToken',data.access_token);
       this.router.navigate(['/home']);
+      console.log(data.access_token)
     },
     (err : HttpErrorResponse)=>{
       this.isLoginError = true;
